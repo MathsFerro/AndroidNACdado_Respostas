@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="fiap.matheus.com.nacdado_resp.GameActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/label_header"
+            android:text="@string/wins"/>
+        <!--android:layout_weight="1" Ao invés do Margin-->
+
+        <TextView
+            android:id="@+id/tvVitorias"
+            style="@style/label_header"
+            android:text="0"/>
+        <!--android:layout_weight="1" Ao invés do Margin-->
+
+        <TextView
+            style="@style/label_header"
+            android:text="@string/draws" />
+        <!--android:layout_weight="1" Ao invés do Margin-->
+
+        <TextView
+            style="@style/label_header"
+            android:id="@+id/tvEmpates"
+            android:text="0"/>
+        <!--android:layout_weight="1" Ao invés do Margin-->
+
+        <TextView
+            style="@style/label_header"
+            android:text="@string/lose"/>
+        <!--android:layout_weight="1" Ao invés do Margin-->
+
+        <TextView
+            android:id="@+id/tvDerrota"
+            style="@style/label_header"
+            android:text="0"/>
+        <!--android:layout_weight="1" Ao invés do Margin-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/header"
+        android:layout_above="@id/btPlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivPlayer"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/dice"
+            android:layout_weight="0.5"/>
+
+        <ImageView
+            android:id="@+id/ivPC"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/dice2"
+            android:layout_weight="0.5"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btPlay"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/play"/>
+
+</RelativeLayout>
